@@ -8,7 +8,8 @@
 .menu-lateral__divisoria {
     width: 100%;
     height: 1px;
-    background-color: var(--azul-medio);
+    background-color: var(--cinza-medio);
+    border: none;
 }
 
 .menu-lateral__container {
@@ -19,7 +20,7 @@
 
 .menu-lateral__item {
     display: flex;
-    gap: .5rem;
+    gap: .75rem;
     align-items: center;
 }
 
