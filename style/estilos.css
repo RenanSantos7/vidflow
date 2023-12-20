@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('./grid.css');
+@import url('./aside.css');
+
 
 :root {
     --azul-profundo: #01080E;
@@ -21,7 +24,7 @@ body {
     height: 100vh;
     overflow: auto;
     font-size: 14px;
-    color: var(--cinza-escuro);                                                            
+    color: var(--cinza-escuro);
     box-sizing: border-box;
     text-align: center;
 }
@@ -30,7 +33,6 @@ body {
 
 .cabecalho__container {
     background-color: var(--branco);
-    height: 80px;
     width: 100%;
     padding: 0 25px;
 }
