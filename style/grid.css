@@ -12,6 +12,7 @@ header {
 aside {
     grid-row: 2;
     grid-column: 1;
+    height: 110vh;
 }
 
 main {

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('./reset.css');
 @import url('./grid.css');
 @import url('./aside.css');
 
@@ -43,11 +44,28 @@ body {
 
     animation: sombraProjetada .6s ease-in-out 1ms;
     animation-timeline: scroll();
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
 }
 
 .logo__item {
 	padding: 15px 0px;
 	cursor: pointer;
+}
+
+.cabecalho__pesquisar__item {
+	display: none;
+}
+
+.form__pesquisa {
+	position: relative;
+	flex: 1;
+	display: flex;
+	justify-content: center;
 }
 
 .pesquisar__input {
@@ -182,6 +200,12 @@ body {
 	padding: 0 20px;
 	/* transition: transform 0.5s ease-in-out;
     transform: translateX(0); */
+
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	overflow: scroll;
+	gap: 15px;
 }
 
 .superior__secao__container-wrapper {
@@ -210,6 +234,7 @@ body {
 	width: 6%;
 	height: 50px;
 	background: linear-gradient(to left, var(--branco) 50%, transparent 100%);
+	display: none;
 }
 
 .superior__slider img {
@@ -221,6 +246,16 @@ body {
 .videos__container {
 	color: black;
 	padding: 153px 20px 10px 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.625rem;
+}
+
+.videos__item {
+	display: block;
+	height: 303px;
+	width: 280px;
+	flex-grow: 1;
 }
 
 iframe {
@@ -229,10 +264,20 @@ iframe {
 	height: 62%;
 }
 
+.descricao-video {
+	margin-top: 1rem;
+	display: grid;
+	text-align: start;
+	column-gap: 1rem;
+	row-gap: 10px;
+	grid-template-columns: auto 1fr;
+}
+
 .descricao-video .img-canal {
 	border-radius: 100%;
 	width: 40px;
 	height: 40px;
+	grid-area: 1 / 1 / 3 / 2;
 }
 
 .descricao-video .titulo-video {
@@ -267,8 +312,7 @@ iframe {
 	/* %ESTILOS SEÇÃO VÍDEOS */
 
 	.videos__container {
-		padding-left: 90px;
-		padding-right: 17px;
+		padding: 1rem;
 	}
 }
 
@@ -279,10 +323,25 @@ iframe {
 		left: 247px;
 	}
 
-	/* % ESTILOS VIDEOS */
+}
 
-	.videos__container {
-		padding-right: 10px;
-		padding-left: 248px;
+@media (min-width: 1156px) {
+	/* % CABEÇALHO */
+
+	.cabecalho__pesquisar__item {
+		display: block;
+		transform: translate(-60px);
+	}
+
+	.pesquisar__input {
+		width: 530px;
+	}
+
+	/* % SECAO SUPERIOR */
+
+	.superior__slider {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
