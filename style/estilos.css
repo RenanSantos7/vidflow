@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('./reset.css');
 @import url('./grid.css');
 @import url('./aside.css');
@@ -239,6 +239,29 @@ body {
 
 .superior__slider img {
 	margin-left: 50%;
+}
+
+/* % SEÇÃO ERRO */
+
+.erro {
+	width: 50%;
+	margin: 5rem auto;
+	text-align: center;
+}
+
+.erro__emoji {
+	width: 300px;
+	filter: grayscale();
+}
+
+.erro__texto {
+	margin-top: 1.5rem;
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+.erro__texto.error {
+	font-size: 1.2rem;
 }
 
 /* % SEÇÃO VÍDEOS */
